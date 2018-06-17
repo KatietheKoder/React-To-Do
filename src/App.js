@@ -12,14 +12,16 @@ class App extends Component {
        ]
      };
      render() {
-        return (
-          <li>{ this.props.description }</li>
-          <li>
-            <input type="checkbox" checked={ this.props.isCompleted } />
-            <span>{ this.props.description }</span>
-          </li>
-        );
-      }
-    }
-
+     return (
+       <div className="App">
+         <ul>
+           { this.state.todos.map( (todo, index) =>
+             <ToDo key={ index } />
+             <ToDo key={ index } description={ todo.description } isCompleted={ todo.isCompleted } />
+           )}
+         </ul>
+       </div>
+     );
+   }
+ }
 export default App;
