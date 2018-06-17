@@ -11,17 +11,15 @@ class App extends Component {
          { description: 'Buy new dishes', isCompleted: false }
        ]
      };
-  render() {
-    return (
-      <div className="App">
-         <ul>
-         { this.state.todos.map( (todo, index) =>
-          <ToDo key={ index } description={ todo.description } isCompleted={ todo.isCompleted } />
-           )}
-        </ul>
-      </div>
-    );
-  }
-}
+     render() {
+        return (
+          <li>{ this.props.description }</li>
+          <li>
+            <input type="checkbox" checked={ this.props.isCompleted } />
+            <span>{ this.props.description }</span>
+          </li>
+        );
+      }
+    }
 
 export default App;
