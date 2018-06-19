@@ -32,12 +32,16 @@ toggleComplete(index) {
     this.setState({ todos: todos });
   }
 
+  deleteTodo(index) {
+      console.log('delete')
+       }
+
   render() {
      return (
        <div className="App">
          <ul>
            { this.state.todos.map( (todo, index) =>
-            <ToDo key={ index } description={ todo.description } isCompleted={ todo.isCompleted } />
+            <ToDo key={ index } description={ todo.description } isCompleted={ todo.isCompleted } toggleComplete={ this.toggleComplete } />
            )}
          </ul>
          <form onSubmit={ (e) => this.handleSubmit(e) }>
