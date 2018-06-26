@@ -13,28 +13,7 @@ import React, { Component } from 'react';
        </div>
      )
    }
- }
-    handleOnClick = () => {
-     this.props.store.dispatch({
-       type: 'DELETE_TODO'
-     });
-   }
-
-   render() <{
-
-    const Todos = this.props.store.getState().todos.map((todo, index) => {
-      return <Todo text={todo.text} key={index} id={todo.id}store={this.props.store} />
-    });
-
-    return (
-
-      <ul>
-        {todos}
-      </ul>
-    );
-  }
-};
-
+ };
 
 
 export default ToDo;
