@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import ToDo from './components/ToDo.js';
+
 class App extends Component {
   constructor(props) {
      super(props);
@@ -37,7 +38,7 @@ toggleComplete(index) {
        <div className="App">
          <ul>
            { this.state.todos.map( (todo, index) =>
-            <ToDo key={ index } description={ todo.description } isCompleted={ todo.isCompleted } />
+         <ToDo key={ index } description={ todo.description } isCompleted={ todo.isCompleted } toggleComplete={ () => this.toggleComplete(index) } />
            )}
          </ul>
          <form onSubmit={ (e) => this.handleSubmit(e) }>
