@@ -8,7 +8,7 @@ import React, { Component } from 'react';
           <input type="checkbox" checked={ this.props.isCompleted } onChange={ this.props.toggleComplete } />
            <span>{ this.props.description }</span>
            <button
-           onClick={this.props.deleteTodo} > delete </button>
+           onClick={this.props.delToDo} > delete </button>
          </li>
        </div>
      )
